@@ -1,0 +1,385 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+    <!-- Заголовок страницы в браузере -->
+    <title>Engine</title>
+    <!-- Подключаем CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 500px)" href="css/mobile-style.css">
+
+    <!-- Кодировка страницы -->
+    <meta charset="UTF-8">
+    <!-- Адаптив 
+    <meta name="viewport" content="width=device-width">-->
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico">
+
+</head>
+<!-- Отображаемое тело страницы -->
+<script>
+    function checkAnimation() {
+        var $elem = $('.row .wpb_content_element');
+
+        $elem.each(function() {
+            var $singleElement = $(this);
+            // If the animation has already been started
+            if ($singleElement.hasClass('start')) return;
+
+            if (isElementInViewport($singleElement)) {
+                // Start the animation
+                $singleElement.addClass('start');
+            }
+        });
+    }
+</script>
+
+<body>
+    <header>
+        <div class="header-text-mobile">
+            <h1>Engine</h1>
+        </div>
+        <div class="header-content">
+            <div class="header-text">
+                <div class="text-header">
+                    <div class="text-header_top">
+                        <div class="text-header_logo"></div>
+                        <div class="text-header_title">
+                            <div class="main-title">
+                                <h1>Engine</h1>
+                            </div>
+                            <div class="main-subtitle">
+                                <h2>We have best quality engines for your car</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-header_bottom">
+                        <div class="header-text-bottom">
+                            <div class="text-bottom_big-text__wrapper">
+                                <div class="text-bottom_big-text">Quisque porta. Nulla pulvinar eleifend sem</div>
+                            </div>
+                            <div class="text-bottom_small-text__wrapper">
+                                <div class="text-bottom_small-text">Aenean</div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-photo">
+                <div class="header-photo__photo"></div>
+            </div>
+        </div>
+
+        </div>
+    </header>
+    <nav>
+        <div class="about">
+            <div class="about_title">
+                <h3>About</h3>
+            </div>
+            <div class="about_header">
+                <div class="about_header__top">
+                    <div class="about_photo">
+                        <img src="img/worker.jfif" alt="Mechanic at work">
+                    </div>
+                    <div class="about_text">
+                        <div class="about_text__item">
+                            <p>Sed convallis magna eu sem. Mauris metus. Etiam egestas wisi a erat. Curabitur vitae diam non enim vestibulum interdum. In dapibus augue non sapien. Sed ac dolor sit amet purus malesuada congue. Phasellus et lorem id felis
+                                nonummy placerat. Aenean placerat.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about_header__bottom">
+                    <div class="about__specific">
+                        <div class="specific_row">
+
+                            <div class="item-main">
+                                <p>Our <br> advantage</p>
+                            </div>
+                            <div class="items-secundary">
+                                <div class="items items-top">
+                                    <div class="item">
+                                        <p>quickly</p>
+                                    </div>
+                                    <div class="item">
+                                        <p>reliable</p>
+                                    </div>
+                                </div>
+                                <div class="items">
+                                    <div class="item qualite">
+                                        <p>qualitatively</p><span>qualitatively</span>
+                                    </div>
+                                    <div class="item">
+                                        <p>cheaply</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about_footer">
+                <div class="about_footer__column">
+                    <div class="about_photo"> <img src="img/list-disc_brakes.jpg" alt="Brakes">
+                        <div class="about_footer__text">
+                            <p>Disc ac velit risus. Maecenas consequat posuere nisi a feugiat. Phasellus fringilla dui nec nulla iaculis rhoncus</p>
+                        </div>
+                    </div>
+                    <div class="about_photo"> <img src="img/list-engine.png" alt="Engine">
+                        <div class="about_footer__text">
+                            <p>Motor ac velit risus. Maecenas consequat posuere nisi a feugiat. Phasellus fringilla dui nec nulla iaculis rhoncus</p>
+                        </div>
+                    </div>
+                    <div class="about_photo"> <img src="img/list-wheel.jpg" alt="Wheel">
+                        <div class="about_footer__text">
+                            <p>Wheels ac velit risus. Maecenas consequat nisi a feugiat. Phasellus fringilla dui nec nulla iaculis rhoncus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="services">
+            <div class="services_title">
+                <h3>Services</h3>
+            </div>
+            <div class="services_container">
+
+                <div class="servis">
+                    <div class="services_text">
+                        <p>Proin libero libero, consectetur nec dapibus in, faucibus eget urna. Integer ac volutpat velit </p>
+                    </div>
+                    <!-- SERVICES MOBILE 1 -->
+                    <div class="services_text-mobile_container">
+                        <div class="btn">
+                            <button class="text_btn-1 btn-info">info</button>
+                            <button class="text_btn-1 btn-x x-1">+</button>
+                        </div>
+                        <div class="text-popup item-1">
+                            <p>Proin libero libero, consectetur nec dapibus in, faucibus eget urna. Integer ac volutpat velit </p>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="services_list">
+                            <div class="services_list__name">
+                                <h4>Semper</h4>
+                            </div>
+                            <div class="services_list__item">
+                                <ul>
+                                    <li>faucibus</li>
+                                    <li>vitae</li>
+                                    <li>curabitur</li>
+
+                                </ul>
+                            </div>
+                            <div class="services_list__price">
+                                <h5>2000,-</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="servis">
+                    <div class="services_text">
+                        <p>Nunc semper turpis egestas ec condimentum odio scelerisque magna ut molestie. Sed at egestas</p>
+                    </div>
+                    <!-- SERVICES MOBILE 2 -->
+                    <div class="services_text-mobile_container">
+                        <div class="btn">
+                            <button class="text_btn-2 btn-info">info</button>
+                            <button class="text_btn-2 btn-x x-2">+</button>
+                        </div>
+                        <div class="text-popup item-2">
+                            <p>Nunc semper turpis egestas ec condimentum odio scelerisque magna ut molestie. Sed at egestas</p>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="services_list">
+                            <div class="services_list__name">
+                                <h4>Odio</h4>
+                            </div>
+                            <div class="services_list__item">
+                                <ul>
+                                    <li>erat</li>
+                                    <li>wisi</li>
+                                    <li>egestas</li>
+                                    <li>etiam</li>
+                                    <li>condimentum</li>
+                                </ul>
+                            </div>
+                            <div class="services_list__price">
+                                <h5>3700,-</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="servis">
+                    <div class="services_text">
+                        <p>Pellentesque bibendum suscipit id tristique risus nec feugiat. Pellentesque habitant morbi </p>
+                    </div>
+                    <!-- SERVICES MOBILE 3 -->
+                    <div class="services_text-mobile_container">
+                        <div class="btn">
+                            <button class="text_btn-3 btn-info">info</button>
+                            <button class="text_btn-3 btn-x x-3">+</button>
+                        </div>
+                        <div class="text-popup item-3">
+                            <p>Pellentesque bibendum suscipit id tristique risus nec feugiat. Pellentesque habitant morbi </p>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="services_list">
+                            <div class="services_list__name">
+                                <h4>Magna</h4>
+                            </div>
+                            <div class="services_list__item">
+                                <ul>
+                                    <li>sem</li>
+                                    <li>magna</li>
+                                    <li>convallis</li>
+                                    <li>sedeu</li>
+                                    <li>pellentesque</li>
+                                    <li>nec</li>
+                                    <li>suscipit</li>
+                                </ul>
+                            </div>
+                            <div class="services_list__price">
+                                <h5>5200,-</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="diagnostic">
+                <div class="diagnostic_title">
+                    <h3>Diagnostic</h3>
+                </div>
+                <div class="diagnostic_container">
+                    <div class="diagnostic_text">
+                        <div class="diagnostic_text__top">
+                            <p>Quisque scelerisque massa id vehicula convallis. Phasellus ac magna eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin quis rutrum augue</p>
+                        </div>
+                        <div class="diagnostic_text__bottom">
+                            <div class="diagnostic_text__bottom__item">
+                                <p>Semper turpis egestas ec condimentum odio scelerisque magna ut molestie
+                                </p>
+                            </div>
+                            <div class="diagnostic_text__bottom__item">
+                                <p>Turpis semper egestas ec condimentum odio scelerisque magna ut molestie
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="diagnostic_photo"><img src="img/diagnostic.jfif" alt="Diagnostic"></div>
+                </div>
+
+                <!-- DIAGNOSTIC MOBILE -->
+                <div class="diagnostic_container-mobile">
+                    <div class="diagnostic_header">
+                        <div class="diagnostic_photo"><img src="img/diagnostic.jfif" alt="Diagnostic"></div>
+                        <div class="diagnostic_header__little_text">
+                            <div class="diagnostic_little_text toper">
+                                <p>Semper turpis egestas ec condimentum odio scelerisque magna ut molestie
+                                </p>
+                            </div>
+                            <div class="diagnostic_little_text">
+                                <p>Turpis semper egestas ec condimentum odio scelerisque magna ut molestie
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="diagnostic_bottom">
+                        <div class="diagnostic_big_text">
+                            <p>Quisque scelerisque massa id vehicula convallis. Phasellus ac magna eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin quis rutrum augue</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+    </nav>
+
+
+    <menu>
+        <div class="adress">
+            <div class="adress_title">
+                <h3>Adress</h3>
+            </div>
+            <div class="adress_container">
+                <div class="adress_text">
+                    <div class="adress_text__title">
+                        <h4>Prague</h4>
+                    </div>
+                    <div class="adress_text__adress">
+                        <p>Kolbenova, 963/27f</p>
+                    </div>
+                    <div class="adress_text__ico">
+                        <div class="map-botton">
+                            <button class="map-btn">+ map</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="adress_map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1279.385269721429!2d14.54012345889319!3d50.10930177355242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470bed25a7ac952d%3A0xd9394b4be931bdea!2sKolbenova%20963%2F27f%2C%20198%2000%20Praha%2014-Hloub%C4%9Bt%C3%ADn!5e0!3m2!1scs!2scz!4v1612201072263!5m2!1scs!2scz"
+                        width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <!----------MAP-MOBILE---------->
+                <div class="adress_map-mobile">
+                    <div class="map-botton">
+                        <button class="map-btn">+</button>
+                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1279.385269721429!2d14.54012345889319!3d50.10930177355242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470bed25a7ac952d%3A0xd9394b4be931bdea!2sKolbenova%20963%2F27f%2C%20198%2000%20Praha%2014-Hloub%C4%9Bt%C3%ADn!5e0!3m2!1scs!2scz!4v1612201072263!5m2!1scs!2scz"
+                        width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="contact_title">
+                <h3>Contact</h3>
+
+            </div>
+            <div class="contact_container">
+                <div class="contact_actions">
+                    <div class="contact_mail">
+                        <a href="mailto:mechanic@seznam.cz">
+                            <p>mechanic@seznam.cz</p>
+                        </a>
+                    </div>
+                    <div class="contact_phone">
+                        <a href="tel:+420 775 456 831">
+                            <p>+420 775 456 831</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact_date">
+                    <p>po-pá 06:00-16:00</p>
+                </div>
+            </div>
+        </div>
+    </menu>
+
+    <footer>
+        <p>© kifoxive 2021</p>
+    </footer>
+
+
+    <script src="js/scroll-out.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
